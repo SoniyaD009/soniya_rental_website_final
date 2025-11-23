@@ -226,29 +226,29 @@ footer {
 }
 
 /* === FINAL GALLERY (3:4 ratio, NOT CROPPED) === */
+/* === FINAL GALLERY: SHOW FULL IMAGE WITHOUT CROPPING === */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr); /* 2 per row, big images */
+    gap: 2rem;
     padding: 1em;
 }
+
 .gallery-item {
     width: 100%;
-    aspect-ratio: 3 / 4;
-    overflow: hidden;
-    border-radius: 8px;
     background: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.35);
-}
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    overflow: hidden;
+    border-radius: 12px;
     display: block;
 }
+
+.gallery-item img {
+    width: 100%;
+    height: auto;     /* keeps original shape */
+    object-fit: contain; /* shows full image */
+    display: block;
+}
+
 @media (max-width: 1024px) {
     .gallery-grid { grid-template-columns: repeat(3, 1fr); }
 }
