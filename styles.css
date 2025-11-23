@@ -144,10 +144,10 @@ header nav a:hover {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0);
     text-align: center;
     padding: 0.8rem;
-    font-size: 1.6rem;
+    font-size: 3rem;
     font-weight: 600;
 }
 
