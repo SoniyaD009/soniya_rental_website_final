@@ -182,9 +182,19 @@ header nav a:hover {
 ----------------------------------------------------- */
 .gallery-grid {
     display: grid;
-    gap: 1.5rem;
-    padding: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 1rem;
     justify-content: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 15px;
+    background: #000;
 }
 
 @media (max-width: 768px) {
@@ -285,4 +295,3 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-
