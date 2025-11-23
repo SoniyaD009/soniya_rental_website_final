@@ -24,7 +24,7 @@ header h1 {
     margin: 0;
     font-weight: bold;
     letter-spacing: 2px;
-    font-size: clamp(1rem, 4.8vw, 2rem);
+    font-size: clamp(1.5rem, 6vw, 3rem);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -49,7 +49,7 @@ header nav a {
 /* === About Section === */
 #about {
     font-family: "Georgia", serif;   /* Or any font you want */
-    font-size: 0.8rem;              /* Slightly bigger text */
+    font-size: 1.1rem;              /* Slightly bigger text */
     line-height: 1.8;               /* Better readability */
     color: #ddd;                    /* Softer text color */
     text-align: center;             /* Optional: center align */
@@ -59,7 +59,7 @@ header nav a {
 #about h2 {
     font-family: "Montserrat", sans-serif; /* Keep heading modern */
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: gold;   /* Make heading stand out */
 }
 
@@ -107,8 +107,8 @@ body {
 /* === Category Grid === */
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
     padding: 1em;
 }
 .category-card {
@@ -278,16 +278,14 @@ footer {
 main { margin-bottom: 2em; }
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);   /* ⭐ Two per row */
+    gap: 1.5rem;
     padding: 1em;
 }
-
-.gallery-img {
+.gallery-img,
+.gallery-item img {
     width: 100%;
-    height: 250px;
+    height: 350px;       /* Bigger gallery images */
     object-fit: cover;
-    border-radius: 8px;
-    display: block;
+    border-radius: 10px;
 }
-
