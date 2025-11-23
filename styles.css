@@ -49,12 +49,12 @@ header h1 {
 header nav {
     display: flex;
     align-items: center;
-    gap: 2rem; /* Increased gap */
+    gap: 2rem;
 }
 
 header nav a {
     color: white;
-    font-size: 2.4rem; /* Increased icon size */
+    font-size: 2.4rem;
     transition: 0.3s;
 }
 
@@ -67,10 +67,10 @@ header nav a:hover {
 ----------------------------------------------------- */
 .section-title {
     text-align: center;
-    font-size: clamp(1.8rem, 4vw, 3rem); /* Reduced */
+    font-size: clamp(1.8rem, 4vw, 3rem);
     font-weight: 700;
     letter-spacing: 1px;
-    margin: 120px 0 1.5rem; /* Positioned below fixed header */
+    margin: 120px 0 1.5rem;
 }
 
 /* -----------------------------------------------------
@@ -178,7 +178,7 @@ header nav a:hover {
 }
 
 /* -----------------------------------------------------
-   NEW GALLERY (2 per row mobile, 3 per row desktop)
+   GALLERY (Always 2 per row)
 ----------------------------------------------------- */
 .gallery-grid {
     display: grid;
@@ -194,29 +194,6 @@ header nav a:hover {
     aspect-ratio: 3 / 4;
     object-fit: cover;
     border-radius: 15px;
-    background: #000;
-}
-
-@media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 769px) {
-    .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 1300px;
-        margin: auto;
-    }
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    border-radius: 10px;
     background: #000;
 }
 
