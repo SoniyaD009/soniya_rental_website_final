@@ -49,7 +49,7 @@ header nav a {
 /* === About Section === */
 #about {
     font-family: "Georgia", serif;   /* Or any font you want */
-    font-size: 1.1rem;              /* Slightly bigger text */
+    font-size: 4rem;              /* Slightly bigger text */
     line-height: 1.8;               /* Better readability */
     color: #ddd;                    /* Softer text color */
     text-align: center;             /* Optional: center align */
@@ -59,7 +59,7 @@ header nav a {
 #about h2 {
     font-family: "Montserrat", sans-serif; /* Keep heading modern */
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 6rem;
     color: gold;   /* Make heading stand out */
 }
 
@@ -79,7 +79,7 @@ body {
     text-align: center;
     margin: 2em 0;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 6rem;
     letter-spacing: 1px;
 }
 
@@ -211,7 +211,7 @@ footer {
 .footer-content a {
     color: white;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 4rem;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -276,16 +276,29 @@ footer {
   border-radius: 8px;
 }
 main { margin-bottom: 2em; }
+
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);   /* ⭐ Two per row */
-    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);  /* 4 per row on large screens */
+    gap: 1rem;
     padding: 1em;
 }
-.gallery-img,
-.gallery-item img {
+/* gallery images */
+.gallery-item, .gallery-img {
     width: 100%;
-    height: 350px;       /* Bigger gallery images */
+    aspect-ratio: 3 / 4;    /* perfect portrait ratio */
     object-fit: cover;
     border-radius: 10px;
 }
+/* === Tablets === */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    }
+}
+
+/* === Mobile === */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    }
