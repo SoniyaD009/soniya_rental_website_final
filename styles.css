@@ -24,7 +24,7 @@ header h1 {
     margin: 0;
     font-weight: bold;
     letter-spacing: 2px;
-    font-size: clamp(3rem, 8vw, 4rem);
+    font-size: clamp(3.5rem, 9vw, 5rem); /* Increased heading size */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -39,30 +39,29 @@ header nav {
 }
 header nav a {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     padding: 0.2rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: color 0.3s ease, transform 0.2s ease;
 }
+
 /* === About Section === */
 #about {
-    font-family: "Georgia", serif;   /* Or any font you want */
-    font-size: 4rem;              /* Slightly bigger text */
-    line-height: 1.8;               /* Better readability */
-    color: #ddd;                    /* Softer text color */
-    text-align: center;             /* Optional: center align */
-    padding: 2em;
+    font-family: "Georgia", serif;
+    font-size: 4.5rem; /* Increased text */
+    line-height: 1.8;
+    color: #ddd;
+    text-align: center;
+    padding: 2.5em;
 }
-
 #about h2 {
-    font-family: "Montserrat", sans-serif; /* Keep heading modern */
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 6rem;
-    color: gold;   /* Make heading stand out */
+    font-size: 7rem; /* increased */
+    color: gold;
 }
-
 
 /* === General Body === */
 body {
@@ -71,7 +70,7 @@ body {
     background-color: #000;
     color: #fff;
     line-height: 1.6;
-    padding-top: 70px; /* avoid header overlap */
+    padding-top: 70px;
 }
 
 /* === Section Titles === */
@@ -79,7 +78,7 @@ body {
     text-align: center;
     margin: 2em 0;
     font-weight: 600;
-    font-size: 6rem;
+    font-size: 6.5rem;
     letter-spacing: 1px;
 }
 
@@ -100,15 +99,15 @@ body {
 }
 @media (max-width: 768px) {
     #video-slider {
-    height: 40vh;
+        height: 40vh;
     }
 }
 
-/* === Category Grid === */
+/* === Category Grid (2 per row) === */
 .category-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
     padding: 1em;
 }
 .category-card {
@@ -120,7 +119,7 @@ body {
 }
 .category-card img {
     width: 100%;
-    height: 300px;
+    height: 380px; /* Larger images */
     object-fit: cover;
     display: block;
     transition: transform 0.5s ease;
@@ -136,60 +135,56 @@ body {
     background: rgba(0,0,0,0.7);
     color: #fff;
     text-align: center;
-    padding: 0.5em;
+    padding: 0.6em;
     font-weight: 600;
 }
+
+/* === Subcategories === */
 .subcategory-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 blocks per row on desktop */
+  grid-template-columns: repeat(4, 1fr);
   gap: 1em;
   padding: 1em;
 }
-
 .subcategory-card {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: #f5f5f5;
+  background: #111;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  color: #333;
+  color: #fff;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(255,255,255,0.2);
 }
-
 .subcategory-card:hover {
-  background: #e0e0e0;
+  background: #222;
   transform: scale(1.05);
 }
 
-/* === Responsive === */
 @media (max-width: 1024px) {
   .subcategory-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 per row on tablets */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-
 @media (max-width: 768px) {
   .subcategory-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on mobile */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 480px) {
   .subcategory-grid {
-    grid-template-columns: 1fr; /* 1 per row on small phones */
+    grid-template-columns: 1fr;
   }
 }
-
 
 /* === Reviews === */
 #reviews {
     text-align: center;
     font-style: italic;
-    font-size: 1.5em;
+    font-size: 2rem;
     padding: 2em;
 }
 
@@ -239,66 +234,44 @@ footer {
 .directions-link:hover {
     color: gold;
 }
-/* === Gallery grid: equal sized items and responsive === */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 160px;
-  align-items: stretch;
-  padding: 1em;
-}
-.gallery-item {
-  width: 100%;
-  aspect-ratio: 3 / 4; /* keeps tiles equal. change to 4/3 or 1/1 if you prefer square tiles */
-  overflow: hidden;
-  border-radius: 8px;
-  background: #111;
-  display: block;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
-  cursor: pointer;
-}
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* crops to fill tile while keeping equal tile sizes */
-  display: block;
-  transition: transform 0.25s ease;
-}
-.gallery-item:hover img {
-  transform: scale(1.03);
-}
-.no-images {
-  color: #fff;
-  text-align: center;
-  padding: 2em;
-  grid-column: 1 / -1;
-  background: rgba(255,255,255,0.03);
-  border-radius: 8px;
-}
-main { margin-bottom: 2em; }
 
+/* === Gallery Grid (2 per row, bigger images) === */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);  /* 4 per row on large screens */
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
     padding: 1em;
 }
-/* gallery images */
 .gallery-item, .gallery-img {
     width: 100%;
-    aspect-ratio: 3 / 4;    /* perfect portrait ratio */
+    aspect-ratio: 3 / 4;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    cursor: pointer;
 }
-/* === Tablets === */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Tablets */
 @media (max-width: 1024px) {
     .gallery-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 per row */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* === Mobile === */
+/* Mobile */
 @media (max-width: 768px) {
     .gallery-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 per row */
+        grid-template-columns: 1fr;
     }
+}
+
+main { margin-bottom: 2em; }
