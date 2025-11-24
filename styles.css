@@ -129,11 +129,12 @@ header nav a:hover {
 
 .category-card img {
     width: 100%;
-    aspect-ratio: 3/4;
     object-fit: contain;
+    aspect-ratio: 3/4;
     background: #000;
     display: block;
     padding: 10px;
+
 }
 
 .category-card:hover {
