@@ -1,155 +1,299 @@
+/* === Fixed Header === */
+header {
+    background: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+header h1 {
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: clamp(1rem, 4.8vw, 2rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    flex: 1 1 auto;
+}
+header nav {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    flex: 0 0 auto;
+}
+header nav a {
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+/* === About Section === */
+#about {
+    font-family: "Georgia", serif;   /* Or any font you want */
+    font-size: 0.8rem;              /* Slightly bigger text */
+    line-height: 1.8;               /* Better readability */
+    color: #ddd;                    /* Softer text color */
+    text-align: center;             /* Optional: center align */
+    padding: 2em;
+}
+
+#about h2 {
+    font-family: "Montserrat", sans-serif; /* Keep heading modern */
+    font-weight: 700;
+    font-size: 2rem;
+    color: gold;   /* Make heading stand out */
+}
+
+
+/* === General Body === */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background: #111;
-    color: white;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    padding-top: 70px; /* avoid header overlap */
 }
 
-/* HEADER */
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 18px;
-    background: #000;
-    align-items: center;
-}
-
-.header-container h1 {
-    font-size: 32px;
-    font-weight: 700;
-}
-
-nav a {
-    color: white;
-    margin-left: 16px;
-    font-size: 32px;
-}
-
-/* TITLES */
+/* === Section Titles === */
 .section-title {
     text-align: center;
-    margin: 35px 0 28px;
-    font-size: 42px;
-    font-weight: 700;
+    margin: 2em 0;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 1px;
 }
 
-/* VIDEO */
-#videoSlider {
-    padding: 10px;
-}
-
-#video-player {
+/* === Video Section === */
+#video-slider {
     width: 100%;
-    aspect-ratio: 9/16;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#video-slider video {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
+    #video-slider {
+    height: 40vh;
+    }
 }
 
-/* CATEGORY CARDS */
+/* === Category Grid === */
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-    padding: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    padding: 1em;
 }
-
 .category-card {
     position: relative;
-    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #111;
+    transition: transform 0.3s ease;
 }
-
-.category-card img.nineSixteen {
+.category-card img {
     width: 100%;
-    aspect-ratio: 9/16;
+    height: 300px;
     object-fit: cover;
-    border-radius: 12px;
+    display: block;
+    transition: transform 0.5s ease;
 }
-
+.category-card:hover img {
+    transform: scale(1.05);
+}
 .category-card .overlay {
     position: absolute;
     bottom: 0;
-    background: rgba(0,0,0,.6);
-    width: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
     text-align: center;
-    padding: 14px 0;
-    font-size: 26px;
-    border-radius: 0 0 12px 12px;
+    padding: 0.5em;
+    font-weight: 600;
 }
-
-/* SUBCATEGORY GRID */
 .subcategory-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 blocks per row on desktop */
+  gap: 1em;
+  padding: 1em;
 }
 
-.squareBox {
-    width: 100%;
-    aspect-ratio: 1/1;
-    background: #222;
+.subcategory-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.subcategory-card:hover {
+  background: #e0e0e0;
+  transform: scale(1.05);
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .subcategory-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .subcategory-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .subcategory-grid {
+    grid-template-columns: 1fr; /* 1 per row on small phones */
+  }
+}
+
+
+/* === Reviews === */
+#reviews {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5em;
+    padding: 2em;
+}
+
+/* === Footer === */
+footer {
+    background: #000;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-size: 34px;
-    font-weight: 800;
-    text-transform: capitalize;
-    border-radius: 16px;
-    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
-
-/* GALLERY */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    padding: 15px;
-}
-
-.gallery-item img.nineSixteen {
-    width: 100%;
-    aspect-ratio: 9/16;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-/* ABOUT + REVIEWS */
-.about-section,
-#reviews {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 22px;
-    line-height: 1.7;
-}
-
-/* FOOTER */
-footer {
-    background: #000;
-    padding: 30px;
-    margin-top: 30px;
-}
-
-.centered-footer {
+.footer-content {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 14px;
+    gap: 40px;
+    align-items: center;
 }
-
 .footer-content a {
     color: white;
-    font-size: 22px;
     text-decoration: none;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+.footer-content a:hover {
+    color: gold;
 }
 
-.footer-content i {
-    font-size: 26px;
+/* === Map Section === */
+#address {
+    text-align: center;
+    padding: 2em;
 }
+#address iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    margin-bottom: 1em;
+}
+.directions-link {
+    color: #fff;
+    text-decoration: underline;
+}
+.directions-link:hover {
+    color: gold;
+}
+/* === Gallery grid: equal sized items and responsive === */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 160px;
+  align-items: stretch;
+  padding: 1em;
+}
+.gallery-item {
+  width: 100%;
+  aspect-ratio: 9 / 16; /* keeps tiles equal. change to 4/3 or 1/1 if you prefer square tiles */
+  overflow: hidden;
+  border-radius: 8px;
+  background: #111;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+  cursor: pointer;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* crops to fill tile while keeping equal tile sizes */
+  display: block;
+  transition: transform 0.25s ease;
+  
+}
+.gallery-item:hover img {
+  transform: scale(1.03);
+}
+.no-images {
+  color: #fff;
+  text-align: center;
+  padding: 2em;
+  grid-column: 1 / -1;
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+}
+main { margin-bottom: 2em; }
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1em;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    
+}
+
+
 
 
 
