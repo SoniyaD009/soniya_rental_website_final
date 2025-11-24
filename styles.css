@@ -107,7 +107,7 @@ body {
 /* === Category Grid === */
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding: 1em;
 }
@@ -141,7 +141,7 @@ body {
 }
 .subcategory-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 blocks per row on desktop */
+  grid-template-columns: repeat(2, 1fr); /* 2 blocks per row on desktop */
   gap: 1em;
   padding: 1em;
 }
@@ -168,7 +168,7 @@ body {
 /* === Responsive === */
 @media (max-width: 1024px) {
   .subcategory-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 per row on tablets */
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
   }
 }
 
