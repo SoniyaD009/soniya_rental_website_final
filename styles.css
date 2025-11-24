@@ -291,6 +291,54 @@ main {
     border-radius: 10px;
     display: block;
 }
+/* === UNIVERSAL WIDTH CONTROL FOR ALL SECTIONS === */
+section, #about, #reviews, #address, footer {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* === Better Header Spacing === */
+header {
+    padding: 0.3rem 0.8rem;
+}
+body {
+    padding-top: 55px;
+}
+
+/* === FIXED CATEGORY GRID - Fully responsive === */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    padding: 1em;
+}
+
+/* === FIX FOOTER OVERFLOW ON MOBILE === */
+@media (max-width: 480px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content a {
+        font-size: 1rem;
+    }
+}
+
+/* === FIX GALLERY GRID SPACING === */
+.gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    padding: 0.5rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
 
 
 
