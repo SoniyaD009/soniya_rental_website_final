@@ -257,6 +257,11 @@ footer {
 main {
     margin-bottom: 2em;
 }
+/* Remove unwanted horizontal scroll */
+html, body {
+    overflow-x: hidden;
+}
+
 
 
 
