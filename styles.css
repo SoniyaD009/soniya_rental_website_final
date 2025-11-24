@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    font-family: Montserrat, sans-serif;
-    background: black;
+    font-family: 'Montserrat', sans-serif;
+    background: #111;
     color: white;
 }
 
@@ -9,98 +9,102 @@ body {
 .header-container {
     display: flex;
     justify-content: space-between;
+    padding: 12px;
+    background: #000;
     align-items: center;
-    padding: 15px;
 }
+.header-container h1 { font-size: 18px; }
+nav a { color: white; margin-left: 10px; font-size: 20px; }
 
-h1, h2 {
-    color: white;
-    text-align: center;
-}
-
-/* CONTACT SECTION */
-.contact-section {
+/* Sections */
+.section-title {
     text-align: center;
     margin: 20px 0;
+    font-size: 24px;
+    color: white;
 }
 
-.contact-item {
-    margin: 8px 0;
-    font-size: 18px;
+/* Category Cards */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 10px;
+}
+.category-card {
+    position: relative;
+}
+.category-card img.nineSixteen {
+    width: 100%;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.category-card .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,.6);
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
 }
 
-.contact-item i {
-    margin-right: 8px;
-}
-
-/* SUBCATEGORY GRID */
+/* Subcategory Boxes */
 .subcategory-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 20px;
+    gap: 14px;
+    padding: 15px;
 }
-
-.subcategory-card {
+.squareBox {
+    width: 100%;
+    aspect-ratio: 1/1;
     background: #222;
     color: white;
-    border-radius: 10px;
-    padding: 20px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
+    justify-content: center;
+    border-radius: 10px;
     font-weight: 600;
-    aspect-ratio: 1 / 1; /* SQUARE */
+    font-size: 18px;
+    text-align: center;
 }
 
-/* GALLERY IMAGES – 9:16 RATIO */
-.gallery img {
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+.gallery-item img.nineSixteen {
     width: 100%;
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 9/16;
     object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 20px;
 }
 
-/* MAP */
-.map-container {
-    width: 90%;
-    margin: auto;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 350px;
-    border: none;
-}
-
-/* CLICK ANYWHERE ON MAP */
-.map-overlay {
-    position: absolute;
-    inset: 0;
-    background: transparent;
-}
-
-/* FOOTER */
-.footer-content {
-    text-align: center;
+/* Footer */
+footer {
+    background: #000;
     padding: 20px;
+    margin-top: 20px;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-content a {
+    color: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
     font-size: 16px;
+    text-decoration: none;
 }
 
-.footer-content div {
-    margin: 8px 0;
-}
-
-.footer-content i {
-    margin-right: 6px;
-}
 
 
 
