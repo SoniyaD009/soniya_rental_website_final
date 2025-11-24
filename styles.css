@@ -7,7 +7,7 @@ header {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 0.5rem 1rem;
+    padding: 1rem 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,13 +18,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 header h1 {
     margin: 0;
     font-weight: bold;
     letter-spacing: 2px;
-    font-size: clamp(1rem, 4.8vw, 2rem);
+    font-size: clamp(2rem, 6vw, 3rem);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -49,7 +49,7 @@ header nav a {
 /* === About Section === */
 #about {
     font-family: "Georgia", serif;   /* Or any font you want */
-    font-size: 0.8rem;              /* Slightly bigger text */
+    font-size: 2rem;              /* Slightly bigger text */
     line-height: 1.8;               /* Better readability */
     color: #ddd;                    /* Softer text color */
     text-align: center;             /* Optional: center align */
@@ -79,7 +79,7 @@ body {
     text-align: center;
     margin: 2em 0;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 6rem;
     letter-spacing: 1px;
 }
 
@@ -100,7 +100,7 @@ body {
 }
 @media (max-width: 768px) {
     #video-slider {
-    height: 40vh;
+    height: 20vh;
     }
 }
 
@@ -137,11 +137,11 @@ body {
     color: #fff;
     text-align: center;
     padding: 0.5em;
-    font-weight: 600;
+    font-weight: 1600;
 }
 .subcategory-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 blocks per row on desktop */
+  grid-template-columns: repeat(2, 1fr); /* 4 blocks per row on desktop */
   gap: 1em;
   padding: 1em;
 }
@@ -168,7 +168,7 @@ body {
 /* === Responsive === */
 @media (max-width: 1024px) {
   .subcategory-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 per row on tablets */
+    grid-template-columns: repeat(2, 1fr); /* 3 per row on tablets */
   }
 }
 
@@ -189,7 +189,7 @@ body {
 #reviews {
     text-align: center;
     font-style: italic;
-    font-size: 1.5em;
+    font-size: 3em;
     padding: 2em;
 }
 
@@ -211,7 +211,7 @@ footer {
 .footer-content a {
     color: white;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 4rem;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -235,6 +235,7 @@ footer {
 .directions-link {
     color: #fff;
     text-decoration: underline;
+    font-size: 4rem;
 }
 .directions-link:hover {
     color: gold;
@@ -242,7 +243,8 @@ footer {
 /* === Gallery grid: equal sized items and responsive === */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+
   gap: 160px;
   align-items: stretch;
   padding: 1em;
@@ -279,7 +281,7 @@ footer {
 main { margin-bottom: 2em; }
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding: 1em;
 }
