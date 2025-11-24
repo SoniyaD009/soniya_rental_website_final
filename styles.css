@@ -83,11 +83,17 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 26px;
-    border-radius: 14px;
+
+    font-size: 34px;        /* 👈 Bigger class name font */
+    font-weight: 800;       /* 👈 Bolder */
+    letter-spacing: 1px;    /* 👈 Cleaner look */
+    text-transform: capitalize; /* 👈 Better presentation */
+
+    border-radius: 16px;
     text-align: center;
-    font-weight: 700;
 }
+
+
 
 /* Gallery */
 .gallery-grid {
