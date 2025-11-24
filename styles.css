@@ -112,10 +112,13 @@ nav a {
 /* About + Reviews */
 .about-section,
 #reviews {
+    width: 100%;
+    max-width: 800px;   /* 👈 Tight centered container */
+    margin: 0 auto;     /* 👈 TRUE center alignment */
     text-align: center;
-    padding: 25px;
-    font-size: 20px;
-    line-height: 1.6;
+    padding: 30px 20px;
+    font-size: 22px;    /* 👈 Slightly bigger text */
+    line-height: 1.7;
 }
 
 /* Footer */
