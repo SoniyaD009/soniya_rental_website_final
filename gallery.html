@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
   <title>Soniya Rental Dresses — Gallery</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -13,31 +12,31 @@
     <div class="header-container">
       <h1>SONIYA RENTAL DRESSES</h1>
       <nav>
-        <!-- Non-home pages: show only home icon -->
-        <a href="index.html" title="Home" class="nav-icon"><i class="bi bi-house-fill"></i></a>
+        <a href="index.html" title="Home"><i class="bi bi-house-fill"></i></a>
+        <a href="#categories" title="Categories"><i class="bi bi-grid-fill"></i></a>
+        <a href="#contact" title="Contact"><i class="bi bi-telephone-fill"></i></a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main style="padding:1em;">
     <h2 class="section-title">Catalog Gallery</h2>
+
+    <!-- Responsive CSS-grid container -->
     <div id="gallery-grid" class="gallery-grid" aria-live="polite"></div>
   </main>
 
   <footer>
     <div class="footer-content">
-      <div class="footer-item">
-        <i class="bi bi-instagram footer-icon" aria-hidden="true"></i>
-        <a href="https://www.instagram.com/soniyarentaldresses?igsh=Y21yazJveDZlMmg5" target="_blank" rel="noopener noreferrer">soniyarentaldresses</a>
-      </div>
-      <div class="footer-item">
-        <i class="bi bi-envelope-fill footer-icon" aria-hidden="true"></i>
-        <a href="mailto:soniyarentaldresses9@gmail.com">soniyarentaldresses9@gmail.com</a>
-      </div>
-      <div class="footer-item">
-        <i class="bi bi-telephone-fill footer-icon" aria-hidden="true"></i>
-        <a href="tel:+918329181166">+91 8329181166</a>
-      </div>
+      <a href="https://www.instagram.com/soniyarentaldresses?igsh=Y21yazJveDZlMmg5" target="_blank">
+        <i class="bi bi-instagram"></i> <span>soniyarentaldresses</span>
+      </a>
+      <a href="mailto:soniyarentaldresses@gmail.com">
+        <i class="bi bi-envelope-fill"></i> <span>soniyarentaldresses9@gmail.com</span>
+      </a>
+      <a href="tel:+918329181166">
+        <i class="bi bi-telephone-fill"></i> <span>+918329181166</span>
+      </a>
     </div>
   </footer>
 
@@ -131,6 +130,7 @@
   </script>
 </body>
 </html>
+
 
 
 
