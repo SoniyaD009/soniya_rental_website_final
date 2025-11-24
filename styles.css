@@ -29,10 +29,9 @@ nav a {
 .section-title {
     text-align: center;
     margin: 35px 0 28px;
-    font-size: 42px;  /* 👈 A more visible, premium heading */
+    font-size: 42px;
     font-weight: 700;
 }
-
 
 /* Videos */
 .nineSixteenVideo {
@@ -51,6 +50,11 @@ nav a {
     padding: 15px;
 }
 
+.category-card {
+    position: relative;
+    width: 100%;
+}
+
 .category-card img.nineSixteen {
     width: 100%;
     aspect-ratio: 9/16;
@@ -65,8 +69,9 @@ nav a {
     width: 100%;
     text-align: center;
     padding: 14px 0;
-    font-size: 26px;
+    font-size: 28px;
     border-radius: 0 0 12px 12px;
+    font-weight: 700;
 }
 
 /* Subcategory Boxes */
@@ -86,16 +91,14 @@ nav a {
     justify-content: center;
     align-items: center;
 
-    font-size: 34px;        /* 👈 Bigger class name font */
-    font-weight: 800;       /* 👈 Bolder */
-    letter-spacing: 1px;    /* 👈 Cleaner look */
-    text-transform: capitalize; /* 👈 Better presentation */
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: capitalize;
 
     border-radius: 16px;
     text-align: center;
 }
-
-
 
 /* Gallery */
 .gallery-grid {
@@ -115,11 +118,11 @@ nav a {
 .about-section,
 #reviews {
     width: 100%;
-    max-width: 800px;   /* 👈 Tight centered container */
-    margin: 0 auto;     /* 👈 TRUE center alignment */
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
     padding: 30px 20px;
-    font-size: 22px;    /* 👈 Slightly bigger text */
+    font-size: 22px;
     line-height: 1.7;
 }
 
@@ -146,6 +149,7 @@ footer {
 .footer-content i {
     font-size: 26px;
 }
+
 
 
 
