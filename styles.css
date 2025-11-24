@@ -244,6 +244,23 @@ footer {
 .footer-content a:hover {
     color: gold;
 }
+.contact-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-left: 2rem;
+}
+
+.contact-column a {
+    color: #fff;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.contact-column a:hover {
+    color: gold;
+}
+
 
 /* -----------------------------------------------------
    MAP SECTION
