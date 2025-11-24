@@ -56,8 +56,8 @@ window.addEventListener("load", () => {
   preloadImages(galleryImages);
 });
 const subcategories = [
-  { name: "Playgroup/Nursery", folder: "playgroup-nursery" },
-  { name: "Jr KG / Sr KG", folder: "jrkg-srkg" },
+  { name: "Playgroup/Nursery", folder: "playgroupnursery" },
+  { name: "Jr KG / Sr KG", folder: "jrkgsrkg" },
   { name: "1st / 2nd", folder: "1st2nd" },
   { name: "3rd / 4th", folder: "3rd4th" },
   { name: "5th / 6th", folder: "5th6th" },
