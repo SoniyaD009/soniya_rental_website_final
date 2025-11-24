@@ -9,12 +9,11 @@
 </head>
 
 <body>
+
 <header>
     <div class="header-container">
         <h1>SONIYA RENTAL DRESSES</h1>
-        <nav>
-            <a href="index.html"><i class="bi bi-house-fill"></i></a>
-        </nav>
+        <nav><a href="index.html"><i class="bi bi-house-fill"></i></a></nav>
     </div>
 </header>
 
@@ -27,15 +26,20 @@ const params = new URLSearchParams(window.location.search);
 const categoryType = params.get('type');
 
 const subcategories = [
-    'Playgroup-Nursery', 'Jr KG-Sr KG',
-    '1st-2nd', '3rd-4th', '5th-6th', '7th-8th', '9th-10th'
+    'PlaygroupNursery',
+    'JrKGsrKG',
+    '1st2nd',
+    '3rd4th',
+    '5th6th',
+    '7th8th',
+    '9th10th'
 ];
 
 const grid = document.getElementById('subcategory-grid');
 
 subcategories.forEach(sub => {
     const box = document.createElement('a');
-    box.href = `gallery.html?category=${categoryType}&subcategory=${sub.replace(/[^a-z0-9]/gi,'').toLowerCase()}`;
+    box.href = `gallery.html?category=${categoryType}&subcategory=${sub}`;
     box.className = 'subcategory-card squareBox';
     box.textContent = sub;
     grid.appendChild(box);
@@ -43,7 +47,7 @@ subcategories.forEach(sub => {
 </script>
 
 <footer>
-    <div class="footer-content">
+    <div class="footer-content centered-footer">
         <a><i class="bi bi-instagram"></i> soniyarentaldresses</a>
         <a><i class="bi bi-envelope-fill"></i> soniyarentaldresses9@gmail.com</a>
         <a><i class="bi bi-telephone-fill"></i> +91 8329181166</a>
@@ -52,5 +56,6 @@ subcategories.forEach(sub => {
 
 </body>
 </html>
+
 
 
