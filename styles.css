@@ -63,13 +63,16 @@ header nav a {
 }
 /* === General Body === */
 body {
+
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #000;
     color: #fff;
     line-height: 1.6;
-    padding-top: 110px;
+    padding-top: 55px;
 }
+
+
 /* === Section Titles === */
 .section-title {
     text-align: center;
