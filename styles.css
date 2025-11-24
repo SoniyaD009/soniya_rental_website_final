@@ -241,12 +241,13 @@ footer {
 }
 /* === Gallery grid: equal sized items and responsive === */
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 160px;
-  align-items: stretch;
-  padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;              /* FIXED */
+    padding: 0;             /* REMOVE SIDE GAPS */
+    margin: 0;              /* ENSURE FULL WIDTH */
 }
+
 .gallery-item {
   width: 100%;
   aspect-ratio: 9 / 16; /* keeps tiles equal. change to 4/3 or 1/1 if you prefer square tiles */
