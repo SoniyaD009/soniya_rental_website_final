@@ -43,7 +43,7 @@ header nav {
 
 header nav a {
     color: white;
-    font-size: 2rem;
+    font-size: 4rem;
     padding: 0.1rem;
     display: inline-flex;
     align-items: center;
@@ -68,7 +68,7 @@ body {
     text-align: center;
     margin: 2em 0;
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 6rem;
     letter-spacing: 1px;
 }
 
@@ -77,17 +77,17 @@ body {
 ============================ */
 #about {
     font-family: "Georgia", serif;
-    font-size: 3rem;
+    font-size: 5rem;
     line-height: 1.8;
     color: #ddd;
     text-align: center;
-    padding: 2em;
+    padding: 3em;
 }
 
 #about h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3rem;
     color: gold;
 }
 
@@ -226,7 +226,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 2.4rem;
+    font-size: 5rem;
     color: white !important;
     text-decoration: none !important;
 }
